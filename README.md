@@ -1,4 +1,4 @@
-![img](wora-app/wora.gif)
+![img](https://github.com/heartFan/wora-app/blob/master/wora.gif)
 # wora-app
 Full Stack Dev Starter: An App that **Write Once, Run Anywhere**(_WORA_).
 
