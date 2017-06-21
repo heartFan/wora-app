@@ -23,6 +23,7 @@ export class HomePage {
   // private readonly rssUrl = 'http://bbs.cloud.icybee.cn/rss/board-Picture'
 
   films: Observable<any>;
+  target_film: Observable<any>;
 
   public posts: Object[] = []
 
@@ -36,7 +37,8 @@ export class HomePage {
   ngOnInit() {
     // this.initBuptBbsRss()
 
-    this.films = this.http.get('http://swapi.co/api/films').map(res => res.json());
+    this.films = this.http.get('http://api.dagoogle.cn/news/get-news?tableNum=4&pagesize=20').map(res => res.json());
+
   }
 
   openDetails(film) {

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Http }     from '@angular/http';
+import { NavController, NavParams } from 'ionic-angular';
+import 'rxjs/add/operator/map';
 
 /**
  * Generated class for the DetailPage page.
@@ -12,17 +14,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'detail.html',
 })
 export class DetailPage {
-  film: any
+  film: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public http:    Http) {
   }
-
+//+ this.navParams.get('film').id.toString()
   ngOnInit() {
-    this.film = this.navParams.get('film')
+    //this.film = this.http.get('http://news-at.zhihu.com/api/4/news/9485033').map(res => res.json());
+    this.film = this.navParams.get('film');
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad DetailPage');
+    console.log(this.film);
   }
 
 }
