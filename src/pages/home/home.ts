@@ -23,7 +23,6 @@ export class HomePage {
   // private readonly rssUrl = 'http://bbs.cloud.icybee.cn/rss/board-Picture'
 
   films: Observable<any>;
-  target_film: Observable<any>;
 
   public posts: Object[] = []
 
